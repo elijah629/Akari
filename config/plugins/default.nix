@@ -1,9 +1,5 @@
 {
   imports = [
-    ./ai/avante.nix
-    ./ai/copilot.nix
-    ./ai/windsurf.nix
-
     ./completion/blink.nix
     ./completion/cmp.nix
     ./completion/friendly-snippets.nix
