@@ -13,6 +13,13 @@
 
     clipboard.providers.wl-copy.enable = true;
 
+    diagnostic.settings = {
+      virtual_text = false;
+      virtual_lines = {
+        only_current_line = false;
+      };
+    };
+
     opts = {
       virtualedit = "block"; # Allow cursor to move where there is no text in visual block mode
       cursorline = true; # Highlight the line where the cursor is located

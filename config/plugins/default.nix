@@ -49,7 +49,6 @@
     ./ui/noice.nix
     ./ui/notify.nix
     ./ui/toggleterm.nix
-    ./ui/precognition.nix
     ./ui/ufo.nix
 
     ./util/colorizer.nix

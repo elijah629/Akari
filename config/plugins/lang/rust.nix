@@ -11,8 +11,6 @@
       enable = true;
 
       settings = {
-        tools.enable_clippy = true;
-
         server = {
           default_settings = {
             inlayHints = {
@@ -45,5 +43,7 @@
 
   extraPackages = with pkgs; [
     rust-analyzer
+    clippy
+    rustfmt
   ];
 }

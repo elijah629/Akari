@@ -62,9 +62,12 @@
     }
 
     {
-      mode = "n";
+      mode = [
+        "n"
+        "i"
+      ];
       key = "<C-s>";
-      action = "<cmd>w<cr><esc>";
+      action = "<cmd>w<cr>";
       options = {
         silent = true;
         desc = "Save file";
