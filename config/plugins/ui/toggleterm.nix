@@ -16,8 +16,8 @@
       hide_numbers = true;
       shade_terminals = true;
       start_in_insert = true;
+      persist_mode = false;
       terminal_mappings = true;
-      persist_mode = true;
       insert_mappings = true;
       close_on_exit = true;
       shell = "zsh";
