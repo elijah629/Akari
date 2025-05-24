@@ -4,12 +4,14 @@
       enable = true;
       inlayHints = true;
 
-      servers.typos_lsp = {
-        enable = true;
-        extraOptions = {
-          init_options.diagnosticSeverity = "Hint";
+      /*
+        servers.typos_lsp = {
+          enable = true;
+          extraOptions = {
+            init_options.diagnosticSeverity = "Hint";
+          };
         };
-      };
+      */
 
       keymaps.lspBuf = {
         "<c-k>" = "signature_help";

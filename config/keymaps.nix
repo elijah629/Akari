@@ -116,28 +116,28 @@
     # Move Lines
     {
       mode = "n";
-      key = "<A-Up>";
+      key = "<A-k>";
       action = "<cmd>m .-2<cr>==";
       options.desc = "Move line up";
     }
 
     {
       mode = "v";
-      key = "<A-Up>";
+      key = "<A-k>";
       action = ":m '<-2<cr>gv=gv";
       options.desc = "Move line up";
     }
 
     {
       mode = "n";
-      key = "<A-Down>";
+      key = "<A-j>";
       action = "<cmd>m .+1<cr>==";
       options.desc = "Move line down";
     }
 
     {
       mode = "v";
-      key = "<A-Down>";
+      key = "<A-j>";
       action = ":m '>+1<cr>gv=gv";
       options.desc = "Move line Down";
     }
@@ -182,20 +182,6 @@
     #   action = "<C-u>zz";
     #   options.desc = "Allow C-d and C-u to keep the cursor in the middle";
     # }
-
-    {
-      mode = "n";
-      key = "n";
-      action = "nzzzv";
-      options.desc = "Allow search terms to stay in the middle";
-    }
-
-    {
-      mode = "n";
-      key = "N";
-      action = "Nzzzv";
-      options.desc = "Allow search terms to stay in the middle";
-    }
 
     # Clear search with ESC
     {

@@ -1,18 +1,12 @@
 {
   imports = [
     ./completion/blink.nix
-    ./completion/cmp.nix
     ./completion/friendly-snippets.nix
     ./completion/lspkind.nix
 
-    ./debug/dap.nix
-
     ./editor/lz-n.nix
     ./editor/neotree.nix
-    ./editor/undotree.nix
     ./editor/whichkey.nix
-    ./editor/yanky.nix
-    ./editor/yazi.nix
 
     ./theme
     ./luasnip
@@ -37,6 +31,7 @@
     ./lang/lua.nix
     ./lang/markdown.nix
     ./lang/nix.nix
+    ./lang/rust.nix
     ./lang/python.nix
     ./lang/shell.nix
     ./lang/typescript.nix
@@ -53,17 +48,14 @@
     ./ui/lualine.nix
     ./ui/noice.nix
     ./ui/notify.nix
-    ./ui/nui.nix
-    ./ui/precognition.nix
     ./ui/toggleterm.nix
+    ./ui/precognition.nix
     ./ui/ufo.nix
 
     ./util/colorizer.nix
     ./util/compiler.nix
     ./util/debugprint.nix
-    ./util/kulala.nix
     ./util/mini.nix
-    ./util/nvim-autopairs.nix
     ./util/nvim-surround.nix
     ./util/plenary.nix
     ./util/persistence.nix

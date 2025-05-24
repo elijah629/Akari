@@ -15,6 +15,19 @@
       bindToCwd = false;
       useLibuvFileWatcher = true;
       followCurrentFile.enabled = true;
+
+    };
+
+    extraOptions = {
+      filesystem = {
+        filtered_items = {
+          visible = true;
+          hide_dotfiles = true;
+          hide_gitignored = true;
+
+          never_show = [ ];
+        };
+      };
     };
 
     defaultComponentConfigs = {

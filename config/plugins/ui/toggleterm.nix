@@ -1,5 +1,4 @@
-{ config, lib, ... }:
-{
+_: {
   plugins.toggleterm = {
     enable = true;
     settings = {
@@ -12,70 +11,45 @@
           end
         end
       '';
-      open_mapping = "[[<C-/>]]";
-      hide_numbers = true;
-      shade_terminals = true;
+
       start_in_insert = true;
       persist_mode = false;
-      terminal_mappings = true;
-      insert_mappings = true;
+
       close_on_exit = true;
-      shell = "zsh";
-      direction = "horizontal"; # 'vertical' | 'horizontal' | 'tab' | 'float'
-      float_opts = {
-        border = "single"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
-        width = 80;
-        height = 20;
-        winblend = 0;
-      };
     };
   };
-
-  keymaps = lib.mkIf config.plugins.toggleterm.enable [
+  keymaps = [
     {
-      mode = [
-        "t"
-        "n"
-      ];
-      key = "<C-g>";
-      action = "<cmd>2ToggleTerm<cr>";
-      options.desc = "Open/Close Terminal 2";
+      mode = "n";
+      key = "<C-/>";
+      action = "<cmd>ToggleTerm<cr><C-\\><C-n>i";
+      options = {
+        desc = "Toggle Terminal Window";
+      };
     }
     {
-      mode = [
-        "t"
-        "n"
-      ];
-      key = "<C-Left>";
-      action = "<cmd>wincmd h<cr>";
-      options.desc = "Go to Left window";
+      mode = "n";
+      key = "<leader>tv";
+      action = "<cmd>ToggleTerm direction=vertical<cr>";
+      options = {
+        desc = "Toggle Vertical Terminal Window";
+      };
     }
     {
-      mode = [
-        "t"
-        "n"
-      ];
-      key = "<C-Right>";
-      action = "<cmd>wincmd l<cr>";
-      options.desc = "Go to Right window";
+      mode = "n";
+      key = "<leader>th";
+      action = "<cmd>ToggleTerm direction=horizontal<cr>";
+      options = {
+        desc = "Toggle Horizontal Terminal Window";
+      };
     }
     {
-      mode = [
-        "t"
-        "n"
-      ];
-      key = "<C-Up>";
-      action = "<cmd>wincmd k<cr>";
-      options.desc = "Go to Up window";
-    }
-    {
-      mode = [
-        "t"
-        "n"
-      ];
-      key = "<C-Down>";
-      action = "<cmd>wincmd j<cr>";
-      options.desc = "Go to Down window";
+      mode = "n";
+      key = "<leader>tf";
+      action = "<cmd>ToggleTerm direction=float<cr>";
+      options = {
+        desc = "Toggle Floating Terminal Window";
+      };
     }
   ];
 }

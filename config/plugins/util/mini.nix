@@ -18,6 +18,8 @@
           delay = 0;
         };
 
+        pairs = { };
+
         snippets = {
           snippets = {
             __unkeyed-1.__raw =
