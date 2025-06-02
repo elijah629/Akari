@@ -8,7 +8,7 @@
   plugins = {
     telescope = {
       enable = true;
-      highlightTheme = "Catppuccin Macchiato";
+      #highlightTheme = "Catppuccin Macchiato";
       extensions = {
         fzf-native.enable = true;
         ui-select = {

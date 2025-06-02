@@ -1,7 +1,7 @@
 { lib, config, ... }:
 {
   plugins.flash = {
-    enable = true;
+    enable = false;
     settings = {
       label.uppercase = false;
       search = {

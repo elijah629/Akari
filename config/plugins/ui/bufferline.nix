@@ -84,14 +84,40 @@
           };
         };
 
-        options.offsets = [
+        options =
+          let
+            close = ''
+              function(buf)
+                require("mini.bufremove").delete(buf)
+              end
+            '';
+          in
           {
-            filetype = "neo-tree";
-            text = "Neo-tree";
-            highlight = "Directory";
-            text_align = "left";
-          }
-        ];
+            mode = "buffers";
+            always_show_bufferline = true;
+
+            enforce_regular_tabs = false;
+
+            persist_buffer_sort = true;
+            right_trunc_marker = "";
+            show_buffer_close_icons = true;
+            show_buffer_icons = true;
+            show_close_icon = true;
+            show_tab_indicators = true;
+            sort_by = "extension";
+            tab_size = 18;
+
+            right_mouse_command.__raw = close;
+            close_command.__raw = close;
+            offsets = [
+              {
+                filetype = "neo-tree";
+                text = "File Explorer";
+                highlight = "Directory";
+                text_align = "center";
+              }
+            ];
+          };
       };
     };
   };

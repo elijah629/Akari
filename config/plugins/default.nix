@@ -2,14 +2,12 @@
   imports = [
     ./completion/blink.nix
     ./completion/friendly-snippets.nix
-    ./completion/lspkind.nix
 
     ./editor/lz-n.nix
     ./editor/neotree.nix
-    ./editor/whichkey.nix
+    ./editor/which-key.nix
 
     ./theme
-    ./luasnip
 
     ./snacks
 
@@ -44,7 +42,6 @@
     ./ui/bufferline.nix
     ./ui/general.nix
     ./ui/flash.nix
-    ./ui/indent-blankline.nix
     ./ui/lualine.nix
     ./ui/noice.nix
     ./ui/notify.nix

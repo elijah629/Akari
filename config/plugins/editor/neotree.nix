@@ -3,12 +3,14 @@
   plugins.neo-tree = {
     enable = true;
     closeIfLastWindow = true;
+
     sources = [
       "filesystem"
       "buffers"
       "git_status"
       "document_symbols"
     ];
+
     popupBorderStyle = "rounded"; # “NC”, “double”, “none”, “rounded”, “shadow”, “single”, “solid” or raw lua code
 
     filesystem = {

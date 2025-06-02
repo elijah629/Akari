@@ -2,7 +2,28 @@
   plugins.blink-cmp = {
     enable = true;
 
+    #lazyLoad.settings.event = [
+    #  "InsertEnter"
+    #  "CmdlineEnter"
+    #];
+
     settings = {
+      cmdline = {
+        completion = {
+          list.selection = {
+            preselect = false;
+          };
+          menu.auto_show = true;
+        };
+        keymap = {
+          preset = "enter";
+          "<CR>" = [
+            "accept_and_enter"
+            "fallback"
+          ];
+        };
+      };
+
       completion = {
         accept.auto_brackets.enabled = true;
         ghost_text.enabled = true;
@@ -13,6 +34,7 @@
         };
 
         list.selection = {
+          auto_insert = false;
           preselect = false;
         };
 
@@ -37,6 +59,11 @@
                 text.__raw = ''
                   function(ctx)
                     local kind_icon, _, _ = require('mini.icons').get('lsp', ctx.kind)
+                    -- Check for both nil and the default fallback icon
+                    if not kind_icon or kind_icon == '󰞋' then
+                      -- Use our configured kind_icons
+                      return require('blink.cmp.config').appearance.kind_icons[ctx.kind] or ""
+                    end
                     return kind_icon
                   end
                 '';
@@ -60,6 +87,24 @@
           };
         };
       };
+
+      fuzzy = {
+        implementation = "rust";
+        prebuilt_binaries = {
+          download = false;
+        };
+      };
+
+      keymap = {
+        preset = "enter";
+      };
+
+      signature = {
+        enabled = true;
+        window.border = "rounded";
+      };
+
+      snippets.preset = "mini_snippets";
     };
   };
   /*
